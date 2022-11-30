@@ -1,0 +1,182 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br">
+  <head>
+    <title>Choose Color -> Treine seu Cérebro </title>
+    <meta http-equiv=”Content-Type” content=”text/html; charset=utf-8″>
+    <script src="joga.js"></script>
+
+    <style type="text/css"> 
+      <!--  
+      * {
+        font: 15px "Comic Sans MS", "Comic Sans", cursive;
+      }
+      body {
+        background-color: #d9eef0;
+       padding-left:300px ;
+      }
+      select {
+        background-color: #fcfcfc
+      }
+      .titulo {
+        font: small-caps 25px Tahoma, sans-serif;
+        color: #6b89a2;
+        background-color: #d9eef0
+      }
+      .vermelho {color: #FF0000 }
+      .verde { color: #006600 }
+      .azul { color: #0000FF }
+      .rosa { color: #FF00FF }
+      .laranja { color: #FF9900 }
+      .preto { color: #000000 }
+      #nivel{
+       padding-left:150px ;
+      }
+      #status{
+        font-size: 20px;
+      }
+    
+      -->
+    </style>
+
+  
+  </head>
+
+  <body onload="document.getElementsByTagName('select')[0].value = '1'"> 
+    <span class="titulo"  style="padding-left:80px ;">Choose Color- Treine seu Cérebro</span><br /><br />
+
+    <form name="jogo" action="#">
+      <span id="nivel" class="vermelho">Nível de dificuldade:</span>
+      <select name="nivel" onchange="MudarNivel()">
+        <option value="1">Fácil</option>
+        <option value="2">Médio</option>
+        <option value="3">Difícil</option>
+      </select><br /><br />
+
+      <span id="facil">  
+        <select name="primeiro">
+          <option value="-">--
+          <option value="#FF0000" class="vermelho">Vermelho</option>
+          <option value="#006600" class="verde">Verde</option>
+          <option value="#0000FF" class="azul">Azul</option>
+          <option value="#FF00FF" class="rosa">Rosa</option>        
+        </select>&nbsp;
+
+        <select name="segundo">
+          <option value="-">--
+          <option value="#FF0000" class="vermelho">Vermelho</option>
+          <option value="#006600" class="verde">Verde</option>
+          <option value="#0000FF" class="azul">Azul</option>
+          <option value="#FF00FF" class="rosa">Rosa</option>
+        </select>&nbsp;
+
+        <select name="terceiro">
+          <option value="-">--
+          <option value="#FF0000" class="vermelho">Vermelho</option>
+          <option value="#006600" class="verde">Verde</option>
+          <option value="#0000FF" class="azul">Azul</option>
+          <option value="#FF00FF" class="rosa">Rosa</option>
+        </select>&nbsp;
+
+        <select name="quarto">
+          <option value="-">--
+          <option value="#FF0000" class="vermelho">Vermelho</option>
+          <option value="#006600" class="verde">Verde</option>
+          <option value="#0000FF" class="azul">Azul</option>
+          <option value="#FF00FF" class="rosa">Rosa</option>
+        </select>
+      </span>
+
+      <span id="medio" style="display: none">  
+        <select name="primeiro">
+          <option value="-">--
+          <option value="#FF0000" class="vermelho">Vermelho</option>
+          <option value="#006600" class="verde">Verde</option>
+          <option value="#0000FF" class="azul">Azul</option>
+          <option value="#FF00FF" class="rosa">Rosa</option>
+          <option value="#FF9900" class="laranja">Laranja</option>
+        </select>&nbsp;
+
+        <select name="segundo">
+          <option value="-">--
+          <option value="#FF0000" class="vermelho">Vermelho</option>
+          <option value="#006600" class="verde">Verde</option>
+          <option value="#0000FF" class="azul">Azul</option>
+          <option value="#FF00FF" class="rosa">Rosa</option>
+          <option value="#FF9900" class="laranja">Laranja</option>
+        </select>&nbsp;
+
+        <select name="terceiro">
+          <option value="-">--
+          <option value="#FF0000" class="vermelho">Vermelho</option>
+          <option value="#006600" class="verde">Verde</option>
+          <option value="#0000FF" class="azul">Azul</option>
+          <option value="#FF00FF" class="rosa">Rosa</option>
+          <option value="#FF9900" class="laranja">Laranja</option>
+        </select>&nbsp;
+
+        <select name="quarto">
+          <option value="-">--
+          <option value="#FF0000" class="vermelho">Vermelho</option>
+          <option value="#006600" class="verde">Verde</option>
+          <option value="#0000FF" class="azul">Azul</option>
+          <option value="#FF00FF" class="rosa">Rosa</option>
+          <option value="#FF9900" class="laranja">Laranja</option>
+        </select>
+      </span>
+
+      <span id="dificil" style="display: none"> 
+        <select name="primeiro">
+          <option value="-">--
+          <option value="#FF0000" class="vermelho">Vermelho</option>
+          <option value="#006600" class="verde">Verde</option>
+          <option value="#0000FF" class="azul">Azul</option>
+          <option value="#FF00FF" class="rosa">Rosa</option>
+          <option value="#FF9900" class="laranja">Laranja</option>
+          <option value="#000000" class="preto">Preto</option>
+        </select>&nbsp;
+
+        <select name="segundo">
+          <option value="-">--
+          <option value="#FF0000" class="vermelho">Vermelho</option>
+          <option value="#006600" class="verde">Verde</option>
+          <option value="#0000FF" class="azul">Azul</option>
+          <option value="#FF00FF" class="rosa">Rosa</option>
+          <option value="#FF9900" class="laranja">Laranja</option>
+          <option value="#000000" class="preto">Preto</option>
+        </select>&nbsp;
+
+        <select name="terceiro">
+          <option value="-">--
+          <option value="#FF0000" class="vermelho">Vermelho</option>
+          <option value="#006600" class="verde">Verde</option>
+          <option value="#0000FF" class="azul">Azul</option>
+          <option value="#FF00FF" class="rosa">Rosa</option>
+          <option value="#FF9900" style="color: #FF9900">Laranja</option>
+          <option value="#000000" class="preto">Preto</option>
+        </select>&nbsp;
+
+        <select name="quarto">
+          <option value="-">--
+          <option value="#FF0000" class="vermelho">Vermelho</option>
+          <option value="#006600" class="verde">Verde</option>
+          <option value="#0000FF" class="azul">Azul</option>
+          <option value="#FF00FF" class="rosa">Rosa</option>
+          <option value="#FF9900" class="laranja">Laranja</option>
+          <option value="#000000" class="preto">Preto</option>
+        </select>
+      </span>&nbsp;&nbsp;
+
+      <input type="button" name="ok" value="OK" onclick="Jogar()" title="Jogar!" onmouseover="style.color = '#FF0000'" onmouseout="style.color = ''" />&nbsp;&nbsp;
+      <input type="button" name="desistir" value="Desistir" onclick="Desistir()" title="Desistir e ver resposta certa" />&nbsp;&nbsp;
+      <input type="button" value="Jogar novamente" onclick="ConfirmarNovaPartida()" title="Iniciar nova partida" />&nbsp;&nbsp;<br /><br />
+
+      <div id="status" style="width: 570px; height: 380px; background-color: #f7f7f7; border: solid 2px #122561; color: #225651; padding: 5px 5px 5px 5px; overflow: auto" onmouseover="style.borderColor = '#165221'" onmouseout="style.borderColor = '#122561'"></div><br />
+
+      <div style="width: 400px; height: 18px; background-color: #f9f5f5; border: solid 2px #122561; color: #225651; padding: 0px 5px 0px 5px">  <!-- Barra de mensagens -->
+        <marquee scrollamount="3">
+          O objetivo deste jogo é encontrar a combinação secreta de cores. No nível fácil, escolha uma entre quatro cores para cada bloco, sendo que você tem dez chances para acertar. No nível médio, são cinco cores disponíveis e doze chances. Já no nível difícil, são seis cores e quatorze chances. Lembrando que uma mesma cor pode estar presente em mais de um bloco. A quantidade de erros por jogada é mostrada ao lado dos blocos. 
+        </marquee>
+      </div>
+    </form>
+  </body>
+</html>

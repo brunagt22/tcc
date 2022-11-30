@@ -1,0 +1,28 @@
+*{
+      font: 15px "Comic Sans MS", "Comic Sans", cursive;
+    }
+    body {
+      background-color: #d9eef0;
+     padding-left:300px ;
+    }
+    select {
+      background-color: #fcfcfc
+    }
+    .titulo {
+      font: small-caps 25px Tahoma, sans-serif;
+      color: #6b89a2;
+      background-color: #d9eef0
+    }
+    .vermelho {color: #FF0000 }
+    .verde { color: #006600 }
+    .azul { color: #0000FF }
+    .rosa { color: #FF00FF }
+    .laranja { color: #FF9900 }
+    .preto { color: #000000 }
+    #nivel{
+     padding-left:150px ;
+    }
+    #status{
+      font-size: 20px;
+    }
+  
